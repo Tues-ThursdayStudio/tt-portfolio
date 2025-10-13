@@ -1,324 +1,305 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Description" content="화목스튜디오 — 정성구 PD 포트폴리오">
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    body {background-color: #0b0b0b}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; color: #f2f4f6; -webkit-text-stroke: #f2f4f6}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; color: #f2f4f6; -webkit-text-stroke: #f2f4f6; min-height: 14.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>화목스튜디오 — 포트폴리오</title>
+  <meta name="description" content="화목스튜디오(대표 정성구) — 예능·강의·비하인드·행사 스케치 영상/사진 제작 포트폴리오" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Dark gradient theme ===== */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#0b0c10,#0e1015 55%,#0a0b0e);color:#f5f6f8;font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Helvetica, Arial, Apple SD Gothic Neo, "나눔고딕", sans-serif;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:24px 20px 80px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(8,10,12,.9),rgba(8,10,12,.65) 60%,rgba(8,10,12,0));backdrop-filter:saturate(140%) blur(6px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo h1{font-family:"Space Grotesk", ui-sans-serif;letter-spacing:.5px;margin:0;font-size:16px;font-weight:700}
+    .links{display:flex;gap:18px}
+    .links a{color:#a7adbb;font-weight:600}
+    .links a.active,.links a:hover{color:#ffffff}
+
+    .hero{padding:48px 20px 12px}
+    .headline{font-family:"Space Grotesk";font-size:clamp(36px,6vw,56px);line-height:1.05;margin:0 0 8px;text-align:center}
+    .sub{color:#a7adbb;font-size:15px;letter-spacing:.3px;text-align:center}
+
+    .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 10px}
+    .tab{padding:10px 14px;border:1px solid #262a33;border-radius:999px;background:#14171d;color:#a7adbb;font-weight:800;font-size:13px;cursor:pointer;transition:transform .15s ease,border-color .2s, background .2s}
+    .tab.active,.tab:hover{color:#fff;border-color:#7c5cfc;background:#191e26;transform:translateY(-1px)}
+
+    .section{margin-top:36px}
+    .section h2{font-family:"Space Grotesk";font-size:24px;margin:0 0 12px}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 12;background:#11141a;border:1px solid #262a33;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.6fr .9fr;min-height:240px}
+    .thumb{position:relative;background:#000;overflow:hidden}
+    .thumb iframe,.thumb video,.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+    .thumb:hover iframe,.thumb:hover img,.thumb:hover video{transform:scale(1.03)}
+    .badge{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.3px}
+    .meta{padding:18px 18px 16px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));display:flex;flex-direction:column;gap:8px}
+    .title{font-weight:800;font-size:18px;margin:2px 0}
+    .rows{display:grid;grid-template-columns:100px 1fr;gap:6px;color:#a7adbb;font-size:13px}
+    .row b{color:#ffffff;font-weight:700}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+    .tag{font-size:11px;font-weight:800;padding:6px 9px;border:1px dashed #262a33;border-radius:999px;color:#a7adbb}
+
+    .about-single{max-width:unset;margin:0 auto}
+    .twocol{display:grid;grid-template-columns:1.8fr .7fr;gap:20px;align-items:start}
+    .panel{background:#11141a;border:1px solid #262a33;border-radius:16px;padding:18px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .contact-links{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;border:1px solid #262a33;padding:10px 14px;border-radius:12px;background:#151922;color:#f5f6f8}
+    .btn:hover{border-color:#7c5cfc}
+
+    footer{margin:48px 0 0;border-top:1px solid #262a33;padding:22px 0;color:#a7adbb;font-size:13px}
+
+    /* Layout tweaks */
+    #about{margin-top:72px}
+    #gearList{margin:0; padding-left:0; list-style:none}
+    #gearList li{margin:6px 0}
+    .about-single .panel ul li{font-size:14px; line-height:1.45}
+    .about-single .panel b{font-size:14px}
+    .about-single .panel{padding:16px 18px}
+    .panel ul{margin-left:0}
+    .panel ul li{padding-left:0}
+
+    @media (max-width: 960px){
+      .card{grid-template-columns:1fr}
+      .twocol{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!doctype html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="ko"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;화목스튜디오 — 포트폴리오&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="화목스튜디오(대표 정성구) — 예능·강의·비하인드·행사 스케치 영상/사진 제작 포트폴리오" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ===== Dark gradient theme ===== */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>html,body{height:100%}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body{margin:0;background:linear-gradient(180deg,#0b0c10,#0e1015 55%,#0a0b0e);color:#f5f6f8;font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Helvetica, Arial, Apple SD Gothic Neo, "나눔고딕", sans-serif;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>a{color:inherit;text-decoration:none}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container{max-width:1200px;margin:0 auto;padding:24px 20px 80px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(8,10,12,.9),rgba(8,10,12,.65) 60%,rgba(8,10,12,0));backdrop-filter:saturate(140%) blur(6px)}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.logo{display:flex;gap:10px;align-items:center}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.logo h1{font-family:"Space Grotesk", ui-sans-serif;letter-spacing:.5px;margin:0;font-size:16px;font-weight:700}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.links{display:flex;gap:18px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.links a{color:#a7adbb;font-weight:600}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.links a.active,.links a:hover{color:#ffffff}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero{padding:48px 20px 12px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.headline{font-family:"Space Grotesk";font-size:clamp(36px,6vw,56px);line-height:1.05;margin:0 0 8px;text-align:center}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.sub{color:#a7adbb;font-size:15px;letter-spacing:.3px;text-align:center}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 10px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tab{padding:10px 14px;border:1px solid #262a33;border-radius:999px;background:#14171d;color:#a7adbb;font-weight:800;font-size:13px;cursor:pointer;transition:transform .15s ease,border-color .2s, background .2s}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tab.active,.tab:hover{color:#fff;border-color:#7c5cfc;background:#191e26;transform:translateY(-1px)}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section{margin-top:36px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section h2{font-family:"Space Grotesk";font-size:24px;margin:0 0 12px}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card{grid-column:span 12;background:#11141a;border:1px solid #262a33;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.6fr .9fr;min-height:240px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.thumb{position:relative;background:#000;overflow:hidden}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.thumb iframe,.thumb video,.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.thumb:hover iframe,.thumb:hover img,.thumb:hover video{transform:scale(1.03)}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.badge{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.3px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.meta{padding:18px 18px 16px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));display:flex;flex-direction:column;gap:8px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.title{font-weight:800;font-size:18px;margin:2px 0}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.rows{display:grid;grid-template-columns:100px 1fr;gap:6px;color:#a7adbb;font-size:13px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.row b{color:#ffffff;font-weight:700}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tag{font-size:11px;font-weight:800;padding:6px 9px;border:1px dashed #262a33;border-radius:999px;color:#a7adbb}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.about-single{max-width:unset;margin:0 auto}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.twocol{display:grid;grid-template-columns:1.8fr .7fr;gap:20px;align-items:start}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.panel{background:#11141a;border:1px solid #262a33;border-radius:16px;padding:18px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>ul{margin:8px 0 0 18px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>li{margin:6px 0}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.contact-links{display:flex;gap:12px;flex-wrap:wrap}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;border:1px solid #262a33;padding:10px 14px;border-radius:12px;background:#151922;color:#f5f6f8}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn:hover{border-color:#7c5cfc}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer{margin:48px 0 0;border-top:1px solid #262a33;padding:22px 0;color:#a7adbb;font-size:13px}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Layout tweaks */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#about{margin-top:72px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#gearList{margin:0; padding-left:0; list-style:none}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#gearList li{margin:6px 0}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.about-single .panel ul li{font-size:14px; line-height:1.45}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.about-single .panel b{font-size:14px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.about-single .panel{padding:16px 18px}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.panel ul{margin-left:0}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.panel ul li{padding-left:0}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 960px){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.card{grid-template-columns:1fr}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.twocol{grid-template-columns:1fr}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="nav container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img src="logo.png" alt="화목스튜디오 로고" style="height:28px;object-fit:contain"/&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;화목스튜디오&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;nav class="links"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#works" class="active"&gt;WORKS&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#about"&gt;ABOUT&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#contact"&gt;CONTACT&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;main class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="headline"&gt;WE FILM, WE EDIT,&lt;br/&gt;YOUR STORY&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="sub"&gt;예능 · 강의 · 비하인드 · 행사 스케치 영상 제작 전문 스튜디오&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div id="categoryTabs" class="tabs"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="works" class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div id="projectGrid" class="grid"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="about" class="section about-single"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;About&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;b&gt;프로필 • 경력 요약&lt;/b&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;b&gt;경력 (5년 이상)&lt;/b&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;서울영상미디어센터 (2018.12 - 2019.01)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;그린웹서비스 (2019.09 - 2020.06)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;머스타드임팩트 (2020.08 - 2023.12)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;화목스튜디오 (2024.12 - 현재)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;b style="display:block;margin-top:10px"&gt;학력&lt;/b&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;동아방송예술대학교 영상제작과 — 졸업(2020.02, 초대졸)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;학점: 3.97 / 4.5&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;b&gt;자격증&lt;/b&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;2종 보통 운전면허 (경기지방경찰청)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;GTQ(포토샵) (한국생산성본부)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;ITQ(한글) (한국생산성본부)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;정보처리기능사 (한국산업인력공단)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;영상촬영 2급 자격 (한국영상인자격협회)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;무인동력비행장치 4종 (한국교통안전공단)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;사진기능사 (한국산업인력공단)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;b style="display:block;margin-top:10px"&gt;군대&lt;/b&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;li&gt;의무경찰 영상 특기병 (2015.10 - 2017.07)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Gear &amp; Contact&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="twocol"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul id="gearList"&gt;&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p style="color:#a7adbb;margin:0 0 10px"&gt;프로젝트 문의는 아래 채널로 연락 주세요.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul style="list-style:none;padding-left:0;margin:0;white-space:nowrap"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;b&gt;이메일&lt;/b&gt; · &lt;a href="#" id="emailText"&gt;seong8389@naver.com&lt;/a&gt;&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li style="margin-top:6px"&gt;&lt;b&gt;전화&lt;/b&gt; · &lt;span id="phoneText"&gt;+82-2076-8389&lt;/span&gt;&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="container" style="padding:0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>© &lt;span id="year"&gt;&lt;/span&gt; 화목스튜디오 · All media © owners</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// ====== 1) 기본 정보 ======</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const PROFILE = {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>studio: '화목스튜디오',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>owner: '정성구',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>bio: `안녕하세요. &lt;b&gt;화목스튜디오&lt;/b&gt; 대표 &lt;b&gt;정성구&lt;/b&gt;입니다. 예능·강의·비하인드·행사 스케치 등 다양한 포맷의 &lt;b&gt;촬영부터 편집&lt;/b&gt;까지 책임 제작합니다. 안정된 진행과 납기를 최우선으로 합니다.`,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>email: 'seong8389@naver.com',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>phone: '+82-2076-8389',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>instagram: '#',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>youtube: '#',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>categories: ['강의 영상','행사 스케치','홍보영상','비하인드 영상','아카이빙 영상'],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gear: [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'CAM : Sony FX3, Sony A7M4, Sony A7C, DJI Mavic Air 2',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'LENS : Sony 16-35mm G F4, Sony 24-70mm F2.8 GM2, Tamron 70-180mm F2.8 G2',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'LIGHT : Nanlite FS-300B',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'Tripod : Smallrig SR3989',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'Gimbal : DJI RS4',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'Mic : Sony UWP-D21',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>'Monitor : Portkeys LH7P'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>]</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// ====== 2) 작품 목록 (연도 포함 &amp; 요청 순서로 정렬) ======</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const PROJECTS = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// ==== 비하인드 (요청: 현재의 반대 순서) ====</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'연예인 마라톤 풀코스 2시간 45분 54초 최고기록 보유! (배우 권화운 X 런콥)', client:'런콥', category:'비하인드', year:2025, youtubeId:'oEb-jEoyCg4'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[Behind] BACKSTAGE : Logline CONCERT with CREZL(크레즐) #2', client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'msLsqqGQsP4'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[Behind] BACKSTAGE : Logline CONCERT with CREZL(크레즐) #1', client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'C6i4mv7HsHc'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:"[Behind] 'HAKUNAMATA:舵' | Music Video with CREZL(크레즐)", client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'XDNCNl0KOxo'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:"[Behind] 'HAKUNAMATA:舵' | ALBUM COVER with CREZL(크레즐)", client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'byZTtzc7pp4'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[Behind] DIVE INTO CREZL(FAN-CONCERT) #2', client:'치타컴퍼니 크레즐', category:'비하인드', year:2024, youtubeId:'hC0NODJaPug'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[Behind] DIVE INTO CREZL(FAN-CONCERT) #1', client:'치타컴퍼니 크레즐', category:'비하인드', year:2024, youtubeId:'51utwEUL064'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[Behind] 청주 단독 콘서트 With CREZL', client:'치타컴퍼니 크레즐', category:'비하인드', year:2024, youtubeId:'0y7Lg9dYNt8'},</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// ==== 행사 스케치 (요청: 현재 반대로) ====</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[현장스케치] KT&amp;G 상상플래닛 | PLANET SUMMIT의 현장 속으로', client:'KT&amp;G 상상플래닛', category:'행사 스케치', year:2025, youtubeId:'E6NiNHLP6Yc'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'2024 IMPACT CIRCLE 결과공유회 스케치', client:'임팩트서클', category:'행사 스케치', year:2024, youtubeId:'H3cdZSQarQk'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'임팩트서클이 SOVAC 2023에 참여했습니다', client:'임팩트서클', category:'행사 스케치', year:2023, youtubeId:'iLFYVQDN3_g'},</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// ==== 홍보영상 (요청: 현재 반대로) ====</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:"‘크레즐’ 유튜브 - Digital Single ‘늦편지’ Lyric Video Teaser", client:'치타컴퍼니 크레즐', category:'홍보영상', year:2024, youtubeId:'18mFpNcxNew'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:"경기도교육청 '하이러닝' 홍보영상", client:'경기도교육청', category:'홍보영상', year:2023, youtubeId:'wBOBW8NNn-4'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'디지털 시민교육 경기도교육청이 함께 하겠습니다ㅣ 경기도교육청TV', client:'경기도교육청', category:'홍보영상', year:2023, youtubeId:'MbDToX3MwQ8'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'경기도교육청 광교 신청사에서 새롭게 출발ㅣ 경기도교육청TV', client:'경기도교육청', category:'홍보영상', year:2023, youtubeId:'ndF6rZwg0c8'},</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// ==== 강의 (요청: 현재 순서 유지 + 연도 추가) ====</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'전 세대 음악심리치료, [피어나]는 다르게 제공합니다 | 피어나 박혜인', client:'KT&amp;G 상상플래닛', category:'강의', year:2025, youtubeId:'10SC73vbmKA'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'수어콘텐츠, [뉴챕터]는 다르게 만듭니다 | 뉴챕터 유동영', client:'KT&amp;G 상상플래닛', category:'강의', year:2025, youtubeId:'EDB_7NpY4a0'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'온가족 안심 숟가락, [세모녀]는 일상과 함께합니다 | 세모녀 이한결', client:'KT&amp;G 상상플래닛', category:'강의', year:2025, youtubeId:'JqelOiRBJEg'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[2024 현장사례 아카데미] 환경, 순환 경제, 재활용, 옷을 다시 입다?! #다시입다연구소', client:'betterbe enter 베터비엔터', category:'강의', year:2024, youtubeId:'xo5hQ6dNncM'},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{title:'[2024 현장사례 아카데미] 사회적 가치로 만들어가는 커뮤니티, #VAKE #베이크 가 추구하는 소셜 임팩트 이야기, #소셜밸류랩', client:'betterbe enter 베터비엔터', category:'강의', year:2024, youtubeId:'W--t4Yw4JDM'},</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// 아카이빙 (샘플 비워둠)</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// {title:'프로젝트 아카이빙 예시', client:'', category:'아카이빙', year:2025, youtubeId:''},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>];</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// ====== 3) 렌더링 ======</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const $ = (sel, el=document) =&gt; el.querySelector(sel);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const $$ = (sel, el=document) =&gt; [...el.querySelectorAll(sel)];</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const CATEGORY_MAP = {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'강의 영상':'강의',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'행사 스케치':'행사 스케치',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'홍보영상':'홍보영상',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'비하인드 영상':'비하인드',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'아카이빙 영상':'아카이빙'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const state = {filter: null};</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function init(){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Tab render</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const tabWrap = document.getElementById('categoryTabs');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>PROFILE.categories.forEach((name,i)=&gt;{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const btn = document.createElement('button');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>btn.className = 'tab'+(i===0?' active':'');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>btn.textContent = name;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>btn.onclick = ()=&gt;{ state.filter = name; $$('.tab',tabWrap).forEach(x=&gt;x.classList.remove('active')); btn.classList.add('active'); renderWorks(); document.getElementById('works').scrollIntoView({behavior:'smooth'}); };</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tabWrap.appendChild(btn);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if(i===0) state.filter = name;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// About &amp; Contact</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('emailText').href = `mailto:${PROFILE.email}`; document.getElementById('emailText').textContent = PROFILE.email;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('phoneText').textContent = PROFILE.phone;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const gearUL = document.getElementById('gearList');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>PROFILE.gear.forEach(g=&gt;{ const li=document.createElement('li'); li.textContent=g; gearUL.appendChild(li); });</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('year').textContent = new Date().getFullYear();</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>renderWorks();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function renderWorks(){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const wrap = document.getElementById('projectGrid');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>wrap.innerHTML='';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const chosen = CATEGORY_MAP[state.filter] || null;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const filtered = PROJECTS.filter(p =&gt; !chosen || (p.category===chosen));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>filtered.forEach(p=&gt;wrap.appendChild(buildCard(p)));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(filtered.length===0){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const msg=document.createElement('div'); msg.className='panel'; msg.textContent='해당 카테고리의 작품이 아직 없습니다.'; wrap.appendChild(msg);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function buildCard(p){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const card = document.createElement('article');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>card.className = 'card';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Media</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const media = document.createElement('div'); media.className='thumb';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let content;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if(p.youtubeId){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const yt = document.createElement('iframe');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>yt.src = `https://www.youtube.com/embed/${p.youtubeId}`; yt.title=p.title; yt.frameBorder='0';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>yt.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; yt.referrerPolicy='strict-origin-when-cross-origin'; yt.allowFullscreen=true;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>content = yt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else if(p.videoSrc){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const v=document.createElement('video'); v.src=p.videoSrc; v.controls=true; v.playsInline=true; v.preload='metadata'; if(p.thumb) v.poster=p.thumb; content=v;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const img=document.createElement('img'); img.src=p.thumb||''; img.alt=p.title; content=img;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>media.appendChild(content);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const badge=document.createElement('div'); badge.className='badge'; badge.textContent=((p.category||'')+ (p.year?` • ${p.year}`:'' )).toUpperCase(); media.appendChild(badge);</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Meta</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const meta=document.createElement('div'); meta.className='meta';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const t=document.createElement('div'); t.className='title'; t.textContent=p.title; meta.appendChild(t);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const rows=document.createElement('div'); rows.className='rows';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>rows.innerHTML = `</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="row"&gt;&lt;span&gt;CLIENT&lt;/span&gt;&lt;/div&gt;&lt;div class="row"&gt;&lt;b&gt;${p.client||'-'}&lt;/b&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="row"&gt;&lt;span&gt;CATEGORY&lt;/span&gt;&lt;/div&gt;&lt;div class="row"&gt;&lt;b&gt;${p.category}&lt;/b&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="row"&gt;&lt;span&gt;YEAR&lt;/span&gt;&lt;/div&gt;&lt;div class="row"&gt;&lt;b&gt;${p.year || '-'}&lt;/b&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>meta.appendChild(rows);</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>card.appendChild(media); card.appendChild(meta);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>return card;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>init();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+  <header>
+    <div class="nav container">
+      <div class="logo">
+        <img src="logo.png" alt="화목스튜디오 로고" style="height:28px;object-fit:contain"/>
+        <h1>화목스튜디오</h1>
+      </div>
+      <nav class="links">
+        <a href="#works" class="active">WORKS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2 class="headline">WE FILM, WE EDIT,<br/>YOUR STORY</h2>
+      <p class="sub">예능 · 강의 · 비하인드 · 행사 스케치 영상 제작 전문 스튜디오</p>
+      <div id="categoryTabs" class="tabs"></div>
+    </section>
+
+    <section id="works" class="section">
+      <div id="projectGrid" class="grid"></div>
+    </section>
+
+    <section id="about" class="section about-single">
+      <h2>About</h2>
+      <div class="panel">
+        <b>프로필 • 경력 요약</b>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px">
+          <div>
+            <b>경력 (5년 이상)</b>
+            <ul>
+              <li>서울영상미디어센터 (2018.12 - 2019.01)</li>
+              <li>그린웹서비스 (2019.09 - 2020.06)</li>
+              <li>머스타드임팩트 (2020.08 - 2023.12)</li>
+              <li>화목스튜디오 (2024.12 - 현재)</li>
+            </ul>
+            <b style="display:block;margin-top:10px">학력</b>
+            <ul>
+              <li>동아방송예술대학교 영상제작과 — 졸업(2020.02, 초대졸)</li>
+              <li>학점: 3.97 / 4.5</li>
+            </ul>
+          </div>
+          <div>
+            <b>자격증</b>
+            <ul>
+              <li>2종 보통 운전면허 (경기지방경찰청)</li>
+              <li>GTQ(포토샵) (한국생산성본부)</li>
+              <li>ITQ(한글) (한국생산성본부)</li>
+              <li>정보처리기능사 (한국산업인력공단)</li>
+              <li>영상촬영 2급 자격 (한국영상인자격협회)</li>
+              <li>무인동력비행장치 4종 (한국교통안전공단)</li>
+              <li>사진기능사 (한국산업인력공단)</li>
+            </ul>
+            <b style="display:block;margin-top:10px">군대</b>
+            <ul>
+              <li>의무경찰 영상 특기병 (2015.10 - 2017.07)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Gear & Contact</h2>
+      <div class="twocol">
+        <div class="panel">
+          <ul id="gearList"></ul>
+        </div>
+        <div class="panel">
+          <p style="color:#a7adbb;margin:0 0 10px">프로젝트 문의는 아래 채널로 연락 주세요.</p>
+          <ul style="list-style:none;padding-left:0;margin:0;white-space:nowrap">
+            <li><b>이메일</b> · <a href="#" id="emailText">seong8389@naver.com</a></li>
+            <li style="margin-top:6px"><b>전화</b> · <span id="phoneText">+82-2076-8389</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:0">
+        © <span id="year"></span> 화목스튜디오 · All media © owners
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // ====== 1) 기본 정보 ======
+    const PROFILE = {
+      studio: '화목스튜디오',
+      owner: '정성구',
+      bio: `안녕하세요. <b>화목스튜디오</b> 대표 <b>정성구</b>입니다. 예능·강의·비하인드·행사 스케치 등 다양한 포맷의 <b>촬영부터 편집</b>까지 책임 제작합니다. 안정된 진행과 납기를 최우선으로 합니다.`,
+      email: 'seong8389@naver.com',
+      phone: '+82-2076-8389',
+      instagram: '#',
+      youtube: '#',
+      categories: ['강의 영상','행사 스케치','홍보영상','비하인드 영상','아카이빙 영상'],
+      gear: [
+        'CAM : Sony FX3, Sony A7M4, Sony A7C, DJI Mavic Air 2',
+        'LENS : Sony 16-35mm G F4, Sony 24-70mm F2.8 GM2, Tamron 70-180mm F2.8 G2',
+        'LIGHT : Nanlite FS-300B',
+        'Tripod : Smallrig SR3989',
+        'Gimbal : DJI RS4',
+        'Mic : Sony UWP-D21',
+        'Monitor : Portkeys LH7P'
+      ]
+    };
+
+    // ====== 2) 작품 목록 (연도 포함 & 요청 순서로 정렬) ======
+    const PROJECTS = [
+      // ==== 비하인드 (요청: 현재의 반대 순서) ====
+      {title:'연예인 마라톤 풀코스 2시간 45분 54초 최고기록 보유! (배우 권화운 X 런콥)', client:'런콥', category:'비하인드', year:2025, youtubeId:'oEb-jEoyCg4'},
+      {title:'[Behind] BACKSTAGE : Logline CONCERT with CREZL(크레즐) #2', client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'msLsqqGQsP4'},
+      {title:'[Behind] BACKSTAGE : Logline CONCERT with CREZL(크레즐) #1', client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'C6i4mv7HsHc'},
+      {title:"[Behind] 'HAKUNAMATA:舵' | Music Video with CREZL(크레즐)", client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'XDNCNl0KOxo'},
+      {title:"[Behind] 'HAKUNAMATA:舵' | ALBUM COVER with CREZL(크레즐)", client:'치타컴퍼니 크레즐', category:'비하인드', year:2025, youtubeId:'byZTtzc7pp4'},
+      {title:'[Behind] DIVE INTO CREZL(FAN-CONCERT) #2', client:'치타컴퍼니 크레즐', category:'비하인드', year:2024, youtubeId:'hC0NODJaPug'},
+      {title:'[Behind] DIVE INTO CREZL(FAN-CONCERT) #1', client:'치타컴퍼니 크레즐', category:'비하인드', year:2024, youtubeId:'51utwEUL064'},
+      {title:'[Behind] 청주 단독 콘서트 With CREZL', client:'치타컴퍼니 크레즐', category:'비하인드', year:2024, youtubeId:'0y7Lg9dYNt8'},
+
+      // ==== 행사 스케치 (요청: 현재 반대로) ====
+      {title:'[현장스케치] KT&G 상상플래닛 | PLANET SUMMIT의 현장 속으로', client:'KT&G 상상플래닛', category:'행사 스케치', year:2025, youtubeId:'E6NiNHLP6Yc'},
+      {title:'2024 IMPACT CIRCLE 결과공유회 스케치', client:'임팩트서클', category:'행사 스케치', year:2024, youtubeId:'H3cdZSQarQk'},
+      {title:'임팩트서클이 SOVAC 2023에 참여했습니다', client:'임팩트서클', category:'행사 스케치', year:2023, youtubeId:'iLFYVQDN3_g'},
+
+      // ==== 홍보영상 (요청: 현재 반대로) ====
+      {title:"‘크레즐’ 유튜브 - Digital Single ‘늦편지’ Lyric Video Teaser", client:'치타컴퍼니 크레즐', category:'홍보영상', year:2024, youtubeId:'18mFpNcxNew'},
+      {title:"경기도교육청 '하이러닝' 홍보영상", client:'경기도교육청', category:'홍보영상', year:2023, youtubeId:'wBOBW8NNn-4'},
+      {title:'디지털 시민교육 경기도교육청이 함께 하겠습니다ㅣ 경기도교육청TV', client:'경기도교육청', category:'홍보영상', year:2023, youtubeId:'MbDToX3MwQ8'},
+      {title:'경기도교육청 광교 신청사에서 새롭게 출발ㅣ 경기도교육청TV', client:'경기도교육청', category:'홍보영상', year:2023, youtubeId:'ndF6rZwg0c8'},
+
+      // ==== 강의 (요청: 현재 순서 유지 + 연도 추가) ====
+      {title:'전 세대 음악심리치료, [피어나]는 다르게 제공합니다 | 피어나 박혜인', client:'KT&G 상상플래닛', category:'강의', year:2025, youtubeId:'10SC73vbmKA'},
+      {title:'수어콘텐츠, [뉴챕터]는 다르게 만듭니다 | 뉴챕터 유동영', client:'KT&G 상상플래닛', category:'강의', year:2025, youtubeId:'EDB_7NpY4a0'},
+      {title:'온가족 안심 숟가락, [세모녀]는 일상과 함께합니다 | 세모녀 이한결', client:'KT&G 상상플래닛', category:'강의', year:2025, youtubeId:'JqelOiRBJEg'},
+      {title:'[2024 현장사례 아카데미] 환경, 순환 경제, 재활용, 옷을 다시 입다?! #다시입다연구소', client:'betterbe enter 베터비엔터', category:'강의', year:2024, youtubeId:'xo5hQ6dNncM'},
+      {title:'[2024 현장사례 아카데미] 사회적 가치로 만들어가는 커뮤니티, #VAKE #베이크 가 추구하는 소셜 임팩트 이야기, #소셜밸류랩', client:'betterbe enter 베터비엔터', category:'강의', year:2024, youtubeId:'W--t4Yw4JDM'},
+
+      // 아카이빙 (샘플 비워둠)
+      // {title:'프로젝트 아카이빙 예시', client:'', category:'아카이빙', year:2025, youtubeId:''},
+    ];
+
+    // ====== 3) 렌더링 ======
+    const $ = (sel, el=document) => el.querySelector(sel);
+    const $$ = (sel, el=document) => [...el.querySelectorAll(sel)];
+
+    const CATEGORY_MAP = {
+      '강의 영상':'강의',
+      '행사 스케치':'행사 스케치',
+      '홍보영상':'홍보영상',
+      '비하인드 영상':'비하인드',
+      '아카이빙 영상':'아카이빙'
+    };
+
+    const state = {filter: null};
+
+    function init(){
+      // Tab render
+      const tabWrap = document.getElementById('categoryTabs');
+      PROFILE.categories.forEach((name,i)=>{
+        const btn = document.createElement('button');
+        btn.className = 'tab'+(i===0?' active':'');
+        btn.textContent = name;
+        btn.onclick = ()=>{ state.filter = name; $$('.tab',tabWrap).forEach(x=>x.classList.remove('active')); btn.classList.add('active'); renderWorks(); document.getElementById('works').scrollIntoView({behavior:'smooth'}); };
+        tabWrap.appendChild(btn);
+        if(i===0) state.filter = name;
+      });
+
+      // About & Contact
+      document.getElementById('emailText').href = `mailto:${PROFILE.email}`; document.getElementById('emailText').textContent = PROFILE.email;
+      document.getElementById('phoneText').textContent = PROFILE.phone;
+      const gearUL = document.getElementById('gearList');
+      PROFILE.gear.forEach(g=>{ const li=document.createElement('li'); li.textContent=g; gearUL.appendChild(li); });
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      renderWorks();
+    }
+
+    function renderWorks(){
+      const wrap = document.getElementById('projectGrid');
+      wrap.innerHTML='';
+      const chosen = CATEGORY_MAP[state.filter] || null;
+      const filtered = PROJECTS.filter(p => !chosen || (p.category===chosen));
+      filtered.forEach(p=>wrap.appendChild(buildCard(p)));
+      if(filtered.length===0){
+        const msg=document.createElement('div'); msg.className='panel'; msg.textContent='해당 카테고리의 작품이 아직 없습니다.'; wrap.appendChild(msg);
+      }
+    }
+
+    function buildCard(p){
+      const card = document.createElement('article');
+      card.className = 'card';
+      // Media
+      const media = document.createElement('div'); media.className='thumb';
+      let content;
+      if(p.youtubeId){
+        const yt = document.createElement('iframe');
+        yt.src = `https://www.youtube.com/embed/${p.youtubeId}`; yt.title=p.title; yt.frameBorder='0';
+        yt.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; yt.referrerPolicy='strict-origin-when-cross-origin'; yt.allowFullscreen=true;
+        content = yt;
+      } else if(p.videoSrc){
+        const v=document.createElement('video'); v.src=p.videoSrc; v.controls=true; v.playsInline=true; v.preload='metadata'; if(p.thumb) v.poster=p.thumb; content=v;
+      } else {
+        const img=document.createElement('img'); img.src=p.thumb||''; img.alt=p.title; content=img;
+      }
+      media.appendChild(content);
+      const badge=document.createElement('div'); badge.className='badge'; badge.textContent=((p.category||'')+ (p.year?` • ${p.year}`:'' )).toUpperCase(); media.appendChild(badge);
+
+      // Meta
+      const meta=document.createElement('div'); meta.className='meta';
+      const t=document.createElement('div'); t.className='title'; t.textContent=p.title; meta.appendChild(t);
+      const rows=document.createElement('div'); rows.className='rows';
+      rows.innerHTML = `
+        <div class="row"><span>CLIENT</span></div><div class="row"><b>${p.client||'-'}</b></div>
+        <div class="row"><span>CATEGORY</span></div><div class="row"><b>${p.category}</b></div>
+        <div class="row"><span>YEAR</span></div><div class="row"><b>${p.year || '-'}</b></div>
+      `;
+      meta.appendChild(rows);
+
+      card.appendChild(media); card.appendChild(meta);
+      return card;
+    }
+
+    init();
+  </script>
 </body>
 </html>
